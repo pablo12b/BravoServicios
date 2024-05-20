@@ -1,0 +1,18 @@
+<form>
+  <div>
+    <label for="username">Nombre de Usuario:</label>
+    <input type="text" id="username" name="username" [(ngModel)]="username" required>
+  </div>
+  <button type="submit" (click)="obtenerCliente()">Obtener Cliente</button>
+</form>
+
+<div *ngIf="clienteData">
+  <h2>Detalles del Cliente</h2>
+  <p>ID: {{ clienteData.id }}</p>
+  <p>Nombre de usuario: {{ clienteData.username }}</p>
+  <p>Nombre: {{ clienteData.firstName }}</p>
+  <p>Apellido: {{ clienteData.lastName }}</p>
+  <p>Email: {{ clienteData.email }}</p>
+  <p>Teléfono: {{ clienteData.phone }}</p>
+  <p>Estado de usuario: {{ clienteData.userStatus }}</p>
+</div>
